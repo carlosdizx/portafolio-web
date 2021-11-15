@@ -21,9 +21,16 @@
         </v-btn>
       </template>
       <v-list>
-        <v-list-item>blue</v-list-item>
-        <v-list-item>red</v-list-item>
-        <v-list-item>green</v-list-item>
+        <v-list-item v-for="(color, index) of colores" :key="index">
+          <v-btn
+            :dark="color.dark"
+            block
+            :color="color.nombre"
+            @click="cambarColor(color.nombre)"
+          >
+            <v-chip :color="color.nombre">{{ index + 1 }}</v-chip>
+          </v-btn>
+        </v-list-item>
       </v-list>
     </v-menu>
   </v-app-bar>
@@ -34,6 +41,14 @@ import { mapState, mapActions } from "vuex";
 
 export default {
   name: "main",
+  data: () => ({
+    colores: [
+      { nombre: "primary", dark: false },
+      { nombre: "success", dark: true },
+      { nombre: "orange", dark: true },
+      { nombre: "red", dark: true },
+    ],
+  }),
   computed: {
     ...mapState(["color"]),
   },
