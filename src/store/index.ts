@@ -5,10 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    color: {
-      type: String,
-      default: "primary",
-    },
+    color: "primary",
   },
   mutations: {
     actualizarColor(state, payload) {

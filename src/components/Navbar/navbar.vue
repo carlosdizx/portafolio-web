@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark>
+  <v-app-bar app :color="color" dark>
     <div class="d-flex align-center">
       <v-img
         alt="Vuetify Logo"
@@ -21,10 +21,13 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
   name: "main",
+  computed: {
+    ...mapState(["color"]),
+  },
   methods: {
     ...mapActions(["cambarColor"]),
   },
