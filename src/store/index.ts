@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    color: "primary",
+    color: localStorage.getItem("color")
+      ? localStorage.getItem("color")
+      : "primary",
   },
   mutations: {
     actualizarColor(state, payload) {
