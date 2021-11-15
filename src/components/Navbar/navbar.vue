@@ -13,10 +13,19 @@
 
     <v-spacer />
 
-    <v-btn text>
-      <span class="mr-2">Color principal</span>
-      <v-icon>mdi-palette</v-icon>
-    </v-btn>
+    <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn color="info" v-bind="attrs" v-on="on">
+          <span class="mr-2">Color principal</span>
+          <v-icon>mdi-palette</v-icon>
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item>blue</v-list-item>
+        <v-list-item>red</v-list-item>
+        <v-list-item>green</v-list-item>
+      </v-list>
+    </v-menu>
   </v-app-bar>
 </template>
 
