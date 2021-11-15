@@ -1,15 +1,13 @@
 <template>
-  <v-app-bar app :color="color" dark>
-    <div class="d-flex align-center">
-      <v-img
-        alt="Vuetify Logo"
-        class="shrink mr-2"
-        contain
-        src="@/assets/logo.png"
-        transition="scale-transition"
-        width="50"
-      />
-    </div>
+  <v-app-bar app :color="color" dark prominent>
+    <v-img
+      alt="Logo"
+      class="shrink my-auto"
+      contain
+      src="@/assets/logo.png"
+      transition="scale-transition"
+      width="80"
+    />
 
     <v-spacer />
 
@@ -43,10 +41,17 @@ export default {
   name: "main",
   data: () => ({
     colores: [
-      { nombre: "primary", dark: false },
-      { nombre: "success", dark: true },
-      { nombre: "orange", dark: true },
       { nombre: "red", dark: true },
+      { nombre: "pink", dark: true },
+      { nombre: "purple", dark: true },
+      { nombre: "indigo", dark: true },
+      { nombre: "blue", dark: true },
+      { nombre: "cyan", dark: true },
+      { nombre: "teal", dark: true },
+      { nombre: "green", dark: true },
+      { nombre: "yellow", dark: false },
+      { nombre: "orange", dark: false },
+      { nombre: "grey darken-4", dark: true },
     ],
   }),
   computed: {

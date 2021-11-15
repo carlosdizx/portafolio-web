@@ -16,6 +16,7 @@ export default new Vuex.Store({
   },
   actions: {
     cambarColor: async ({ commit }, color: string) => {
+      localStorage.setItem("color", color);
       commit("actualizarColor", color);
     },
   },
