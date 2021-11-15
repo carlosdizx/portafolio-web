@@ -13,7 +13,7 @@
 
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="info" v-bind="attrs" v-on="on">
+        <v-btn color="grey" v-bind="attrs" v-on="on">
           <span class="mr-2">Color principal</span>
           <v-icon>mdi-palette</v-icon>
         </v-btn>
@@ -41,6 +41,8 @@ export default {
   name: "main",
   data: () => ({
     colores: [
+      { nombre: "yellow", dark: false },
+      { nombre: "orange", dark: false },
       { nombre: "red", dark: true },
       { nombre: "pink", dark: true },
       { nombre: "purple", dark: true },
@@ -49,8 +51,6 @@ export default {
       { nombre: "cyan", dark: true },
       { nombre: "teal", dark: true },
       { nombre: "green", dark: true },
-      { nombre: "yellow", dark: false },
-      { nombre: "orange", dark: false },
       { nombre: "grey darken-4", dark: true },
     ],
   }),
