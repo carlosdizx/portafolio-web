@@ -6,7 +6,11 @@
       </h1>
       <v-form>
         <h4>Tecnologias utilizadas</h4>
-        <v-icon v-for="(icon, index) of datos.tecnologias" :key="index">
+        <v-icon
+          :color="color"
+          v-for="(icon, index) of datos.tecnologias"
+          :key="index"
+        >
           {{ icon }}
         </v-icon>
         <v-alert>{{ datos.descripcion }}</v-alert>
