@@ -7,6 +7,7 @@
       <v-form>
         <h4>Tecnologias utilizadas</h4>
         <v-icon
+          x-large
           :color="color"
           v-for="(icon, index) of datos.tecnologias"
           :key="index"
