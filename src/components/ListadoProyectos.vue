@@ -1,22 +1,18 @@
 <template>
-  <v-container>
-    <v-card>
-      <v-card-text><h1>Proyectos desarrollados</h1></v-card-text>
-      <Proyecto
-        class="my-5"
-        v-for="(proyecto, index) of proyectos"
-        :key="index"
-        :datos="proyecto"
-      />
-    </v-card>
-  </v-container>
+  <v-card>
+    <v-card-text><h1>Proyectos desarrollados</h1></v-card-text>
+    <Proyecto
+      class="my-5"
+      v-for="(proyecto, index) of proyectos"
+      :key="index"
+      :datos="proyecto"
+    />
+  </v-card>
 </template>
 
 <script>
 import Proyecto from "./Proyecto.vue";
-import {
-  LISTAR_PROYECTOS,
-} from "@/services/recursos/proyectos";
+import { LISTAR_PROYECTOS } from "@/services/recursos/proyectos";
 export default {
   name: "ListadoProyectos",
   data: () => ({
