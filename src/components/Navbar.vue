@@ -71,7 +71,7 @@
 import { mapState, mapActions } from "vuex";
 
 export default {
-  name: "main",
+  name: "Navbar",
   data: () => ({
     colores: [
       { nombre: "orange", dark: false },
