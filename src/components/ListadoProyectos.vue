@@ -6,8 +6,9 @@
   </v-container>
 </template>
 
-<script lang="ts">
+<script>
 import Proyecto from "./Proyecto.vue";
+import { LISTAR_PROYECTOS } from "@/services/recursos/proyectos";
 export default {
   name: "ListadoProyectos",
   data: () => ({
@@ -31,6 +32,14 @@ export default {
     },
   }),
   components: { Proyecto },
+  methods: {
+    listarProyectos: async () => {
+      return await LISTAR_PROYECTOS();
+    },
+  },
+  async created() {
+    console.log((await this.listarProyectos()).data);
+  },
 };
 </script>
 
