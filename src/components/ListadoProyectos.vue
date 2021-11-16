@@ -25,6 +25,9 @@ export default {
         " the release of Letraset sheets containing Lorem Ipsum passages," +
         " and more recently with desktop publishing software like" +
         " Aldus PageMaker including versions of Lorem Ipsum.",
+      pagina: "https://portafolio-carlos-diaz.netlify.app/",
+      repositorio: "https://portafolio-carlos-diaz.netlify.app/",
+      privado: true,
     },
   }),
   components: { Proyecto },
