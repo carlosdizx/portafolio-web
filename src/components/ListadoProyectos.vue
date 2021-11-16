@@ -12,8 +12,8 @@ export default {
   name: "ListadoProyectos",
   data: () => ({
     datos: {
-      titulo: "Hola",
-      tecnologias: ["mdi-angular", "mdi-facebook"],
+      titulo: "Proyecto lorem ipsum",
+      tecnologias: ["mdi-angular", "mdi-language-javascript"],
       descripcion:
         "Lorem Ipsum is simply dummy text of the printing and typesetting" +
         " industry. Lorem Ipsum has been the industry's standard" +
