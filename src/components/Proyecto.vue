@@ -1,10 +1,14 @@
 <template>
-  <v-card :color="color">
+  <v-card>
     <v-card-text>
       <v-form>
-        <h1>{{ titulo }}</h1>
-        <h3>{{ subtitulo }}</h3>
-        <v-alert>{{ descripcion }}</v-alert>
+        <h1>{{ datos.titulo }}</h1>
+        <br />
+        <h4>Tecnologias utilizadas</h4>
+        <v-icon v-for="(icon, index) of datos.tecnologias" :key="index">
+          {{ icon }}
+        </v-icon>
+        <v-alert>{{ datos.descripcion }}</v-alert>
       </v-form>
     </v-card-text>
   </v-card>
@@ -19,13 +23,7 @@ export default {
     ...mapState(["color"]),
   },
   props: {
-    titulo: String,
-    subtitulo: String,
-    descripcion: String,
-    imagen: String,
-    link: String,
-    page: String,
-    privado: Boolean,
+    datos: Object,
   },
 };
 </script>
