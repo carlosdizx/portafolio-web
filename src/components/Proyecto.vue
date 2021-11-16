@@ -14,7 +14,19 @@
         >
           {{ icon }}
         </v-icon>
-        <v-alert>{{ datos.descripcion }}</v-alert>
+        <br />
+        <v-expansion-panels>
+          <v-expansion-panel>
+            <v-expansion-panel-header>
+              <h4>Descripción</h4>
+            </v-expansion-panel-header>
+            <v-expansion-panel-content>
+              <v-alert dark dense>
+                <h5>{{ datos.descripcion }}</h5>
+              </v-alert>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
       </v-form>
     </v-card-text>
   </v-card>
