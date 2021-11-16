@@ -1,9 +1,9 @@
 <template>
   <v-card>
-    <v-card-title>Formulario de registro de proyectos</v-card-title>
+    <v-card-text><h1>Formulario de registro de proyectos</h1></v-card-text>
     <v-card-text>
       <v-form>
-        <v-text-field label="Titulo" />
+        <v-text-field outlined dense label="Titulo" />
         <v-combobox
           outlined
           dense
@@ -12,9 +12,9 @@
           label="Tecnologias"
           small-chips
         ></v-combobox>
-        <v-textarea label="Descripcion" />
-        <v-text-field label="Pagina" />
-        <v-text-field label="Repositorio" />
+        <v-textarea outlined dense label="Descripcion" />
+        <v-text-field outlined dense label="Pagina" />
+        <v-text-field outlined dense label="Repositorio" />
       </v-form>
       <v-card-text>
         <v-btn color="success">Registrar</v-btn>
