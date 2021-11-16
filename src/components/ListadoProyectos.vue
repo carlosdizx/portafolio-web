@@ -1,6 +1,8 @@
 <template>
   <v-container>
     <v-card>
+      {{ proyectos }}<br />
+      <v-btn @click="registrarProyecto">Registrar</v-btn>
       <Proyecto :datos="datos" />
     </v-card>
   </v-container>
@@ -8,10 +10,14 @@
 
 <script>
 import Proyecto from "./Proyecto.vue";
-import { LISTAR_PROYECTOS } from "@/services/recursos/proyectos";
+import {
+  LISTAR_PROYECTOS,
+  REGISTRAR_PROYECTO,
+} from "@/services/recursos/proyectos";
 export default {
   name: "ListadoProyectos",
   data: () => ({
+    proyectos: [],
     datos: {
       titulo: "Proyecto lorem ipsum",
       tecnologias: ["mdi-angular", "mdi-language-javascript"],
@@ -33,12 +39,15 @@ export default {
   }),
   components: { Proyecto },
   methods: {
-    listarProyectos: async () => {
-      return await LISTAR_PROYECTOS();
+    async listarProyectos() {
+      this.proyectos = (await LISTAR_PROYECTOS()).data;
+    },
+    async registrarProyecto() {
+      await REGISTRAR_PROYECTO(this.datos);
     },
   },
-  async created() {
-    console.log((await this.listarProyectos()).data);
+  async mounted() {
+    await this.listarProyectos();
   },
 };
 </script>

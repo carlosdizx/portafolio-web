@@ -7,3 +7,10 @@ export const LISTAR_PROYECTOS = async () =>
       "Content-Type": "application/json",
     },
   });
+
+export const REGISTRAR_PROYECTO = async (datos: any) =>
+  await INSTACIA.post(`proyectos.json`, JSON.stringify(datos), {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
