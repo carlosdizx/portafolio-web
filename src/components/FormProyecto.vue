@@ -74,7 +74,7 @@ export default {
     descripcion: "",
     pagina: "",
     repositorio: "",
-    privado: true,
+    privado: false,
   }),
   computed: {
     ...mapState(["color"]),
@@ -95,7 +95,7 @@ export default {
       this.descripcion = "";
       this.pagina = "";
       this.repositorio = "";
-      this.privado = true;
+      this.privado = false;
     },
   },
 };
