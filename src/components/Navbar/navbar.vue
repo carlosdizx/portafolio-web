@@ -74,7 +74,6 @@ export default {
   name: "main",
   data: () => ({
     colores: [
-      { nombre: "yellow", dark: false },
       { nombre: "orange", dark: false },
       { nombre: "red", dark: true },
       { nombre: "pink", dark: true },
