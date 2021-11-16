@@ -1,7 +1,9 @@
 <template>
-  <v-card>
-    <Proyecto :datos="datos" />
-  </v-card>
+  <v-container>
+    <v-card>
+      <Proyecto :datos="datos" />
+    </v-card>
+  </v-container>
 </template>
 
 <script lang="ts">

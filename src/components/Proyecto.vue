@@ -1,9 +1,10 @@
 <template>
   <v-card>
     <v-card-text>
+      <h1>
+        <v-alert dense :color="color" dark>{{ datos.titulo }}</v-alert>
+      </h1>
       <v-form>
-        <h1>{{ datos.titulo }}</h1>
-        <br />
         <h4>Tecnologias utilizadas</h4>
         <v-icon v-for="(icon, index) of datos.tecnologias" :key="index">
           {{ icon }}
