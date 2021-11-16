@@ -1,9 +1,13 @@
 <template>
   <v-container>
     <v-card>
-      {{ proyectos }}<br />
-      <v-btn @click="registrarProyecto">Registrar</v-btn>
-      <Proyecto :datos="datos" />
+      <v-card-text><h1>Proyectos desarrollados</h1></v-card-text>
+      <Proyecto
+        class="my-5"
+        v-for="(proyecto, index) of proyectos"
+        :key="index"
+        :datos="proyecto"
+      />
     </v-card>
   </v-container>
 </template>
@@ -12,7 +16,6 @@
 import Proyecto from "./Proyecto.vue";
 import {
   LISTAR_PROYECTOS,
-  REGISTRAR_PROYECTO,
 } from "@/services/recursos/proyectos";
 export default {
   name: "ListadoProyectos",
@@ -40,10 +43,7 @@ export default {
   components: { Proyecto },
   methods: {
     async listarProyectos() {
-      this.proyectos = (await LISTAR_PROYECTOS()).data;
-    },
-    async registrarProyecto() {
-      await REGISTRAR_PROYECTO(this.datos);
+      this.proyectos = Object.values((await LISTAR_PROYECTOS()).data);
     },
   },
   async mounted() {
